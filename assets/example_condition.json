@@ -1,0 +1,8 @@
+{
+  "text": "Sinus rhythm|Right bundle branch block",
+  "icd": ["I4510"],
+  "icd_text": ["Unspecified right bundle-branch block"],
+  "age": 72,
+  "gender": "F",
+  "hr": 75.0
+}

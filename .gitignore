@@ -1,0 +1,47 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Data and generated artifacts
+data_icd/
+ecg2latent/
+exp/
+Dit_checkpoints/
+Dit_PTB_scratch/
+Dit_novae_checkpoints/
+Dit_diffusetsvae_checkpoints/
+generation_results*/
+generation_reslults*/
+visual*/
+keshihua/
+runs/
+wandb/
+outputs/
+results/
+
+# Large model/data files are ignored by default.
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npy
+*.npz
+*.h5
+*.csv.gz
+
+# Released pretrained artifacts.
+!checkpoints/
+checkpoints/*
+!checkpoints/.gitkeep
+!checkpoints/hcc_ecg_full_ema.pth
+!checkpoints/ecg_vae_ema.pth
+!checkpoints/icd_graph_data.pt
+!checkpoints/icd_hyperbolic_best.pth
+
+# Logs and OS/editor files
+*.log
+.DS_Store
+.vscode/
+.idea/

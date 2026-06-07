@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "exp_type": "hcc_ecg_ptb",
+        "device": "cuda:0",
+        "vae_latent": true,
+        "description": "HCC-ECG training template for PTB-XL-style latent ECG data"
+    },
+    "dependencies": {
+        "checkpoints_dir": "checkpoints",
+        "dataset_path": "data/ptbxl_latent_train.pt",
+        "val_dataset_path": "data/ptbxl_latent_val.pt",
+        "vae_path": "checkpoints/ecg_vae_ema.pth",
+        "icd_graph_path": "checkpoints/icd_graph_data.pt",
+        "icd_embeddings_path": "checkpoints/icd_hyperbolic_best.pth"
+    },
+    "hyper_para": {
+        "lr": 0.0001,
+        "epochs": 1000,
+        "batch_size": 128,
+        "num_train_steps": 1000,
+        "beta_start": 0.00085,
+        "beta_end": 0.012,
+        "vae_latent_dim": 4,
+        "dit_hidden_size": 512,
+        "dit_depth": 8,
+        "dit_num_heads": 8,
+        "dit_dropout": 0.2,
+        "mlp_ratio": 4.0,
+        "use_rope": false,
+        "icd_embed_dim": 768,
+        "text_embed_dim": 768,
+        "weight_decay": 0.1,
+        "gradient_accumulation_steps": 1,
+        "warmup_epochs": 20,
+        "max_grad_norm": 1.0,
+        "use_ema": true,
+        "ema_decay": 0.9999,
+        "ema_update_after": 3000,
+        "ema_update_every": 1,
+        "save_interval": 25,
+        "resume": false,
+        "resume_checkpoint_dir": ""
+    },
+    "notes": {
+        "usage": "Template configuration. Update data and checkpoint paths before running."
+    }
+}

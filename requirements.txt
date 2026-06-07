@@ -1,0 +1,16 @@
+torch
+torchvision
+torchaudio
+diffusers
+transformers
+numpy
+pandas
+scipy
+scikit-learn
+tqdm
+wfdb
+neurokit2
+geoopt
+matplotlib
+seaborn
+PyYAML
